@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.0.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.0.0" />
+    <PackageReference Include="coverlet.collector" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DesignQuestions\" />
+    <Folder Include="CompanyInterviews\" />
+    <Folder Include="ProgrammingQuestions\Array\Easy\" />
+    <Folder Include="ProgrammingQuestions\Array\Hard\" />
+    <Folder Include="ProgrammingQuestions\Array\Medium\" />
+    <Folder Include="ProgrammingQuestions\BinarySearchTree\Easy\" />
+    <Folder Include="ProgrammingQuestions\BinarySearchTree\Hard\" />
+    <Folder Include="ProgrammingQuestions\BinarySearchTree\Medium\" />
+    <Folder Include="ProgrammingQuestions\BinaryTree\Easy\" />
+    <Folder Include="ProgrammingQuestions\BinaryTree\Hard\" />
+    <Folder Include="ProgrammingQuestions\BinaryTree\Medium\" />
+    <Folder Include="ProgrammingQuestions\BitManipulation\Easy\" />
+    <Folder Include="ProgrammingQuestions\BitManipulation\Hard\" />
+    <Folder Include="ProgrammingQuestions\BitManipulation\Medium\" />
+    <Folder Include="ProgrammingQuestions\DynamicProgramming\Easy\" />
+    <Folder Include="ProgrammingQuestions\DynamicProgramming\Hard\" />
+    <Folder Include="ProgrammingQuestions\DynamicProgramming\Medium\" />
+    <Folder Include="ProgrammingQuestions\Graph\Easy\" />
+    <Folder Include="ProgrammingQuestions\Graph\Hard\" />
+    <Folder Include="ProgrammingQuestions\Graph\Medium\" />
+    <Folder Include="ProgrammingQuestions\Hashing\Easy\" />
+    <Folder Include="ProgrammingQuestions\Hashing\Hard\" />
+    <Folder Include="ProgrammingQuestions\Hashing\Medium\" />
+    <Folder Include="ProgrammingQuestions\Heap\Easy\" />
+    <Folder Include="ProgrammingQuestions\Heap\Hard\" />
+    <Folder Include="ProgrammingQuestions\Heap\Medium\" />
+    <Folder Include="ProgrammingQuestions\LinkedList\Easy\" />
+    <Folder Include="ProgrammingQuestions\LinkedList\Hard\" />
+    <Folder Include="ProgrammingQuestions\LinkedList\Medium\" />
+    <Folder Include="ProgrammingQuestions\Math\Easy\" />
+    <Folder Include="ProgrammingQuestions\Math\Hard\" />
+    <Folder Include="ProgrammingQuestions\Math\Medium\" />
+    <Folder Include="ProgrammingQuestions\Matrix\Easy\" />
+    <Folder Include="ProgrammingQuestions\Matrix\Hard\" />
+    <Folder Include="ProgrammingQuestions\Matrix\Medium\" />
+    <Folder Include="ProgrammingQuestions\Queue\Easy\" />
+    <Folder Include="ProgrammingQuestions\Queue\Hard\" />
+    <Folder Include="ProgrammingQuestions\Queue\Medium\" />
+    <Folder Include="ProgrammingQuestions\Recursion\Easy\" />
+    <Folder Include="ProgrammingQuestions\Recursion\Hard\" />
+    <Folder Include="ProgrammingQuestions\Recursion\Medium\" />
+    <Folder Include="ProgrammingQuestions\Searching\Easy\" />
+    <Folder Include="ProgrammingQuestions\Searching\Hard\" />
+    <Folder Include="ProgrammingQuestions\Searching\Medium\" />
+    <Folder Include="ProgrammingQuestions\SlidingWindow\Easy\" />
+    <Folder Include="ProgrammingQuestions\SlidingWindow\Hard\" />
+    <Folder Include="ProgrammingQuestions\SlidingWindow\Medium\" />
+    <Folder Include="ProgrammingQuestions\Sorting\Easy\" />
+    <Folder Include="ProgrammingQuestions\Sorting\Hard\" />
+    <Folder Include="ProgrammingQuestions\Sorting\Medium\" />
+    <Folder Include="ProgrammingQuestions\Stack\Easy\" />
+    <Folder Include="ProgrammingQuestions\Stack\Hard\" />
+    <Folder Include="ProgrammingQuestions\Stack\Medium\" />
+    <Folder Include="ProgrammingQuestions\String\Easy\" />
+    <Folder Include="ProgrammingQuestions\String\Hard\" />
+    <Folder Include="ProgrammingQuestions\String\Medium\" />
+    <Folder Include="ProgrammingQuestions\Tries\Easy\" />
+    <Folder Include="ProgrammingQuestions\Tries\Hard\" />
+    <Folder Include="ProgrammingQuestions\Tries\Medium\" />
+    <Folder Include="ProgrammingQuestions\TwoPointer\Easy\" />
+    <Folder Include="ProgrammingQuestions\TwoPointer\Hard\" />
+    <Folder Include="ProgrammingQuestions\TwoPointer\Medium\" />
+  </ItemGroup>
+
+</Project>
