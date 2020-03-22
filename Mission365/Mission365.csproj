@@ -16,7 +16,6 @@
   <ItemGroup>
     <Folder Include="DesignQuestions\" />
     <Folder Include="CompanyInterviews\" />
-    <Folder Include="ProgrammingQuestions\Array\Easy\" />
     <Folder Include="ProgrammingQuestions\Array\Hard\" />
     <Folder Include="ProgrammingQuestions\Array\Medium\" />
     <Folder Include="ProgrammingQuestions\BinarySearchTree\Easy\" />
