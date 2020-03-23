@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -9,21 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
-    <PackageReference Include="MSTest.TestAdapter" Version="2.1.0" />
-    <PackageReference Include="MSTest.TestFramework" Version="2.1.0" />
-    <PackageReference Include="coverlet.collector" Version="1.2.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="DesignQuestions\" />
     <Folder Include="CompanyInterviews\" />
     <Folder Include="ProgrammingQuestions\Array\Easy\" />
     <Folder Include="ProgrammingQuestions\Array\Hard\" />
-    <Folder Include="ProgrammingQuestions\Array\Medium\" />
     <Folder Include="ProgrammingQuestions\BinarySearchTree\Easy\" />
     <Folder Include="ProgrammingQuestions\BinarySearchTree\Hard\" />
     <Folder Include="ProgrammingQuestions\BinarySearchTree\Medium\" />
@@ -80,6 +69,16 @@
     <Folder Include="ProgrammingQuestions\TwoPointer\Easy\" />
     <Folder Include="ProgrammingQuestions\TwoPointer\Hard\" />
     <Folder Include="ProgrammingQuestions\TwoPointer\Medium\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="1.2.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.1.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.1.0" />
   </ItemGroup>
 
 </Project>

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Mission365.ProgrammingQuestions.LinkedList.Hard
+namespace DataStructureAlgorithm.ProgrammingQuestions.LinkedList.Hard
 {
     /// <summary>
     /// https://leetcode.com/problems/merge-k-sorted-lists/
