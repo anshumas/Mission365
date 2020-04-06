@@ -17,6 +17,12 @@ namespace DataStructureAlgorithm.ProgrammingQuestions.Array.Medium
             int[] result = ProductExceptSelf(new int[] { 1, 2, 3, 4 });
 
         }
+        /// <summary>
+        /// Note: Please solve it without division and in O(n). below solution is not without division
+        /// i need to find solution without divide in O(n)
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
         public int[] ProductExceptSelf(int[] nums)
         {
             int prod = 1;

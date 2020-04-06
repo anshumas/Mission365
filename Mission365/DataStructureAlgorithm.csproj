@@ -11,7 +11,6 @@
   <ItemGroup>
     <Folder Include="DesignQuestions\" />
     <Folder Include="CompanyInterviews\" />
-    <Folder Include="ProgrammingQuestions\Array\Easy\" />
     <Folder Include="ProgrammingQuestions\Array\Hard\" />
     <Folder Include="ProgrammingQuestions\BinarySearchTree\Easy\" />
     <Folder Include="ProgrammingQuestions\BinarySearchTree\Hard\" />
@@ -60,7 +59,6 @@
     <Folder Include="ProgrammingQuestions\Stack\Easy\" />
     <Folder Include="ProgrammingQuestions\Stack\Hard\" />
     <Folder Include="ProgrammingQuestions\Stack\Medium\" />
-    <Folder Include="ProgrammingQuestions\String\Easy\" />
     <Folder Include="ProgrammingQuestions\String\Hard\" />
     <Folder Include="ProgrammingQuestions\String\Medium\" />
     <Folder Include="ProgrammingQuestions\Tries\Easy\" />
