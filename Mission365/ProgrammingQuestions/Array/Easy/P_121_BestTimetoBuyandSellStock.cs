@@ -16,6 +16,7 @@ namespace DataStructureAlgorithm.ProgrammingQuestions.Array.Easy
         public void MyTestMethod()
         {
             int result = MaxProfit(new int[] { 1, 2, 3, 4 });
+            string s = "anshuman";
 
         }
         public int MaxProfit(int[] prices)

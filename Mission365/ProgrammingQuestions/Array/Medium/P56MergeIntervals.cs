@@ -19,6 +19,7 @@ namespace DataStructureAlgorithm.ProgrammingQuestions.Array.Medium
                 new int[]{3, 4 },
             };
             var r = Merge(input.ToArray());
+            
         }
         public int[][] Merge(int[][] intervals)
         {
