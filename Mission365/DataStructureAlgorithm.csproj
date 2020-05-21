@@ -9,12 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DesignQuestions\" />
     <Folder Include="ProgrammingQuestions\Array\Hard\" />
     <Folder Include="ProgrammingQuestions\BinarySearchTree\Easy\" />
     <Folder Include="ProgrammingQuestions\BinarySearchTree\Hard\" />
     <Folder Include="ProgrammingQuestions\BinarySearchTree\Medium\" />
-    <Folder Include="ProgrammingQuestions\BinaryTree\Easy\" />
     <Folder Include="ProgrammingQuestions\BinaryTree\Hard\" />
     <Folder Include="ProgrammingQuestions\BinaryTree\Medium\" />
     <Folder Include="ProgrammingQuestions\BitManipulation\Easy\" />
@@ -39,7 +37,6 @@
     <Folder Include="ProgrammingQuestions\Math\Medium\" />
     <Folder Include="ProgrammingQuestions\Matrix\Easy\" />
     <Folder Include="ProgrammingQuestions\Matrix\Hard\" />
-    <Folder Include="ProgrammingQuestions\Matrix\Medium\" />
     <Folder Include="ProgrammingQuestions\Queue\Easy\" />
     <Folder Include="ProgrammingQuestions\Queue\Hard\" />
     <Folder Include="ProgrammingQuestions\Queue\Medium\" />
@@ -59,7 +56,6 @@
     <Folder Include="ProgrammingQuestions\Stack\Hard\" />
     <Folder Include="ProgrammingQuestions\String\Hard\" />
     <Folder Include="ProgrammingQuestions\String\Medium\" />
-    <Folder Include="ProgrammingQuestions\Tries\Easy\" />
     <Folder Include="ProgrammingQuestions\Tries\Hard\" />
     <Folder Include="ProgrammingQuestions\Tries\Medium\" />
     <Folder Include="ProgrammingQuestions\TwoPointer\Easy\" />

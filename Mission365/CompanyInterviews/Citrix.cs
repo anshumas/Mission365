@@ -200,7 +200,7 @@ namespace DataStructureAlgorithm.CompanyInterviews
         public bool IsPalindrome(string s)
         {
             int left = 0;
-            
+
             int right = s.Length - 1;
             s = Regex.Replace(s, "[^0-9a-zA-Z]", string.Empty);
             Console.WriteLine(s);
@@ -214,7 +214,107 @@ namespace DataStructureAlgorithm.CompanyInterviews
                 left++;
                 right--;
             }
+
             return true;
+        }
+        public string Reformat(string s)
+        {
+            Queue<char> chq = new Queue<char>();
+            Queue<int> intq = new Queue<int>();
+            StringBuilder result = new StringBuilder();
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (Char.IsLetter(s[i]))
+                {
+                    chq.Enqueue(s[i]);
+                }
+                if (Char.IsDigit(s[i]))
+                {
+                    intq.Enqueue(s[i]);
+                }
+            }
+            if (Math.Abs(chq.Count - intq.Count) > 1)
+            {
+                return "";
+            }
+            else
+            {
+
+                bool isChBig = chq.Count > intq.Count ? true : false;
+                while (chq.Count > 0 || intq.Count > 0)
+                {
+                    if (isChBig)
+                    {
+                        if (chq.Count > 0)
+                        {
+                            result.Append(chq.Dequeue());
+                        }
+                        if (intq.Count > 0)
+                        {
+                            result.Append(intq.Dequeue());
+                        }
+                    }
+                    else
+                    {
+                        if (intq.Count > 0)
+                        {
+                            result.Append(intq.Dequeue());
+                        }
+                        if (chq.Count > 0)
+                        {
+                            result.Append(chq.Dequeue());
+                        }
+
+                    }
+                }
+            }
+            return result.ToString();
+
+        }
+        [TestMethod]
+        public void LengthOfLongestSubstringTest()
+        {
+            int t = LengthOfLongestSubstring("abcadefgbb");
+        }
+        public int LengthOfLongestSubstring1(string s)
+        {
+            if (s.Length <= 1) return s.Length;
+            int tail = 0;
+            int longest = 0;
+            int[] characters = new int[256];
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                char value = s[i];
+                if (characters[value] <= tail)
+                {
+                    characters[value] = (i + 1);
+                    longest = Math.Max(longest, (i + 1) - tail);
+                }
+                else
+                {
+                    tail = characters[value];
+                    characters[value] = (i + 1);
+                }
+            }
+
+            return longest;
+
+        }
+        public int LengthOfLongestSubstring(String s)
+        {
+            int n = s.Length;
+            int longest = 0;
+            int tail = 0;
+            int[] characters = new int[256];
+            for (int i = 0; i < n; i++)
+            {
+                char value = s[i];
+                tail = Math.Max(characters[value], tail);
+                longest = Math.Max(longest, (i + 1) - tail);
+                characters[value] = (i + 1);
+            }
+            return longest;
         }
     }
 }
