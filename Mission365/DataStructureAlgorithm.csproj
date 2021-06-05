@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ProgrammingQuestions\Array\Hard\" />
+    <Folder Include="ProgrammingQuestions\ArrayProblems\Hard\" />
     <Folder Include="ProgrammingQuestions\BinarySearchTree\Easy\" />
     <Folder Include="ProgrammingQuestions\BinarySearchTree\Hard\" />
     <Folder Include="ProgrammingQuestions\BinarySearchTree\Medium\" />

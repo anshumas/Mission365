@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataStructureAlgorithm.ProgrammingQuestions.Array.Medium
+namespace DataStructureAlgorithm.ProgrammingQuestions.ArrayProblems.Medium
 {
     [TestClass]
     public class MinHeapTest
