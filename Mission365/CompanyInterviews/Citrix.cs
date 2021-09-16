@@ -274,7 +274,25 @@ namespace DataStructureAlgorithm.CompanyInterviews
         [TestMethod]
         public void LengthOfLongestSubstringTest()
         {
-            int t = LengthOfLongestSubstring("abcadefgbb");
+            int t = MyLengthOfLongestSubstring("abcadefgbb");
+        }
+        public int MyLengthOfLongestSubstring(string s)
+        {
+            Dictionary<char, int> seen = new Dictionary<char, int>();
+
+            int max = 0;
+            int start = 0;
+            for (int i = 0; i < s.Length; i++)
+            {
+                char value = s[i];
+                if (seen.ContainsKey(value))
+                {
+                    start = Math.Max(start, seen[value] + 1);
+                }
+                seen[value] = i;
+                max = Math.Max(max, i - start + 1);
+            }
+            return max;
         }
         public int LengthOfLongestSubstring1(string s)
         {
@@ -301,7 +319,7 @@ namespace DataStructureAlgorithm.CompanyInterviews
             return longest;
 
         }
-        public int LengthOfLongestSubstring(String s)
+        public int LengthOfLongestSubstring2(String s)
         {
             int n = s.Length;
             int longest = 0;
@@ -315,6 +333,69 @@ namespace DataStructureAlgorithm.CompanyInterviews
                 characters[value] = (i + 1);
             }
             return longest;
+        }
+        public int LengthOfLongestSubstring(string s)
+        {
+
+            // Creating a set to store the last positions of occurrence
+            Dictionary<char, int> seen = new Dictionary<char, int>();
+            int maximum_length = 0;
+
+            // starting the initial point of window to index 0
+            int start = 0;
+
+            for (int index = 0; index < s.Length; index++)
+            {
+                char value = s[index];
+                // Checking if we have already seen the element or not
+                if (seen.ContainsKey(value))
+                {
+                    // If we have seen the number, move the start pointer
+                    // to position after the last occurrence
+                    start = Math.Max(start, seen[value] + 1);
+                }
+
+                // Updating the last seen value of the character
+                seen[value] = index;
+                maximum_length = Math.Max(maximum_length, index - start + 1);
+            }
+            return maximum_length;
+        }
+        [TestMethod]
+        public void CheckInclusionTest()
+        {
+            bool result = CheckInclusion("adc", "dcda");
+        }
+
+        public bool CheckInclusion(string s1, string s2)
+        {
+
+            if (s1.Length > s2.Length)
+                return false;
+            int[] s1map = new int[26];
+            for (int i = 0; i < s1.Length; i++)
+                s1map[s1[i] - 'a']++;
+            for (int i = 0; i <= s2.Length - s1.Length; i++)
+            {
+                int[] s2map = new int[26];
+                for (int j = 0; j < s1.Length; j++)
+                {
+                    s2map[s2[i + j] - 'a']++;
+                }
+                if (matches(s1map, s2map))
+                    return true;
+            }
+            return false;
+
+        }
+        public bool matches(int[] s1map, int[] s2map)
+        {
+            for (int i = 0; i < 26; i++)
+            {
+                if (s1map[i] != s2map[i])
+                    return false;
+            }
+            return true;
         }
     }
 }
