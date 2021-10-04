@@ -6,7 +6,7 @@ using System.Text;
 namespace DataStructureAlgorithm.ProgrammingQuestions.BinaryTree
 {
     [TestClass]
-    public class BinaryreeTest
+    public class BinaryTreeTest
     {
         /// <summary>
         /// 33. Search in Rotated Sorted Array
@@ -15,7 +15,7 @@ namespace DataStructureAlgorithm.ProgrammingQuestions.BinaryTree
         [TestMethod]
         public void MyTestMethod()
         {
-            int result = Search(new int[] {4, 5, 6, 7, 0, 1, 2}, 4);
+            int result = Search(new int[] { 4, 5, 6, 7, 0, 1, 2 }, 4);
             Assert.AreEqual(result, 0);
         }
         public int Search(int[] nums, int target)
@@ -82,12 +82,27 @@ namespace DataStructureAlgorithm.ProgrammingQuestions.BinaryTree
             Connect(root);
         }
 
-        public void Connect(Node root)
+        public Node Connect(Node root)
         {
-            int level = GetHeight(root.left);
-            ConnectTree(root, level);
+            if (root == null) return null;
+            Queue<Node> q = new Queue<Node>();
+            q.Enqueue(root);
+            Node pre = null;
 
+            while (q.Count > 0)
+            {
+                pre = null;
+                for (int j = 0, sz = q.Count; j < sz; j++)
+                {
+                    Node nd = q.Dequeue();
+                    nd.next = pre;
+                    pre = nd;
+                    if (nd.right != null) q.Enqueue(nd.right);
+                    if (nd.left != null) q.Enqueue(nd.left);
+                }
+            }
 
+            return root;
         }
         public void ConnectTree(Node root, int level)
         {
@@ -107,6 +122,38 @@ namespace DataStructureAlgorithm.ProgrammingQuestions.BinaryTree
             public Node next;
             public Node(int x) { val = x; }
         }
+        /// <summary>
+        /// https://leetcode.com/problems/combinations/
+        /// </summary>
+        [TestMethod]
+        public void CombineTest()
+        {
 
+            var result = Combine(4, 2);
+        }
+        public IList<IList<int>> Combine(int n, int k)
+        {
+            IList<IList<int>> result = new List<IList<int>>();
+            if (k == 0)
+            {
+                result.Add(new List<int>());
+                return result;
+            }
+            Combinations(1, new List<int>(), n, k, result);
+            return result;
+        }
+        public void Combinations(int start, IList<int> current, int n, int k, IList<IList<int>> result)
+        {
+            if (current.Count == k)
+            {
+                result.Add(new List<int>(current));
+            }
+            for (int i = start; i <= n && current.Count < k; i++)
+            {
+                current.Add(i);
+                Combinations(i + 1, current, n, k, result);
+                current.RemoveAt(current.Count - 1);
+            }
+        }
     }
 }

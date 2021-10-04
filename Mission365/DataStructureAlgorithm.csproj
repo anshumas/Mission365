@@ -10,9 +10,6 @@
 
   <ItemGroup>
     <Folder Include="ProgrammingQuestions\ArrayProblems\Hard\" />
-    <Folder Include="ProgrammingQuestions\BinarySearchTree\Easy\" />
-    <Folder Include="ProgrammingQuestions\BinarySearchTree\Hard\" />
-    <Folder Include="ProgrammingQuestions\BinarySearchTree\Medium\" />
     <Folder Include="ProgrammingQuestions\BinaryTree\Hard\" />
     <Folder Include="ProgrammingQuestions\BinaryTree\Medium\" />
     <Folder Include="ProgrammingQuestions\BitManipulation\Easy\" />
