@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DataStructureAlgorithm.ProgrammingQuestions.BinaryTree
@@ -155,5 +156,70 @@ namespace DataStructureAlgorithm.ProgrammingQuestions.BinaryTree
                 current.RemoveAt(current.Count - 1);
             }
         }
+        /// <summary>
+        /// https://leetcode.com/problems/permutations/
+        /// </summary>
+        [TestMethod]
+        public void PermuteTest()
+        {
+
+            var result = Permute(new int[] { 1, 2, 3 });
+        }
+        IList<IList<int>> Permutes = new List<IList<int>>();
+
+        public IList<IList<int>> Permute(int[] nums)
+        {
+            GetPermute(new List<int>(), nums);
+
+            return Permutes;
+        }
+
+        private void GetPermute(List<int> list, int[] nums)
+        {
+            List<int> tempList = null;
+
+            if (list.Count != nums.Length)
+            {
+                for (int i = 0; i <= nums.Length - 1; i++)
+                {
+                    if (!list.Contains(nums[i]))
+                    {
+                        tempList = new List<int>(list);
+                        tempList.Add(nums[i]);
+                        GetPermute(tempList, nums);
+                    }
+                }
+            }
+            else
+                Permutes.Add(list);
+        }
+
+        public IList<IList<int>> Permute1(int[] nums)
+        {
+            var result = new List<IList<int>>();
+            var fact = new[] { 1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800 };
+            for (int i = 1; i <= fact[nums.Length]; i++)
+            {
+                result.Add(Perms(i, nums, fact));
+            }
+            return result;
+        }
+
+        public List<int> Perms(int n, int[] s, int[] fact)
+        {
+            var sb = new List<int>();
+            var s2 = s.ToList();
+            n--;
+            for (int sl = s2.Count; sl > 0; sl--)
+            {
+                int g = fact[sl];
+                n = n % (g);
+                int i = (int)Math.Floor((double)n / (g / sl));
+                sb.Add(s2[i]);
+                s2.RemoveAt(i);
+            }
+            return sb;
+        }
     }
 }
+
