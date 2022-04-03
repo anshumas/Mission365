@@ -162,12 +162,97 @@ namespace DataStructureAlgorithm.ProgrammingQuestions.BinaryTree
         [TestMethod]
         public void PermuteTest()
         {
-
+            string s = "ABC";
             var result = Permute(new int[] { 1, 2, 3 });
+        }
+        public List<List<int>> Permute(int[] s)
+        {
+            List<List<int>> result = new List<List<int>>();
+            Permute(s.ToList(), 0, s.Length - 1, result);
+
+            return result;
+        }
+        public void Permute(List<int> str, int l, int r, List<List<int>> result)
+        {
+            if (l == r)
+            {
+                result.Add(str);
+            }
+            else
+            {
+                for (int i = l; i <= r; i++)
+                {
+                    str = swap(str, l, i);
+                    Permute(str, l + 1, r, result);
+                    str = swap(str, l, i);
+                }
+            }
+        }
+        public static List<int> swap(List<int> a, int i, int j)
+        {
+            if (i == j) return a;
+            int temp;
+            temp = a[i];
+            a[i] = a[j];
+            a[j] = temp;
+            return new List<int>(a);
+        }
+        /// <summary>
+        /// https://leetcode.com/problems/permutations/
+        /// </summary>
+        [TestMethod]
+        public void PermuteTest3()
+        {
+            string s = "ABC";
+            var result = Permute3(s);
+        }
+        public List<string> Permute3(string s)
+        {
+            List<string> result = new List<string>();
+            Permute3(s, 0, s.Length - 1, result);
+
+            return result;
+        }
+        public void Permute3(string str, int l, int r, List<string> result)
+        {
+            if (l == r)
+            {
+                result.Add(str);
+            }
+            else
+            {
+                for (int i = l; i <= r; i++)
+                {
+                    str = swap3(str, l, i);
+                    Permute3(str, l + 1, r, result);
+                    str = swap3(str, l, i);
+                }
+            }
+        }
+        public static string swap3(string a,
+                              int i, int j)
+        {
+           
+            char temp;
+            char[] charArray = a.ToCharArray();
+            temp = charArray[i];
+            charArray[i] = charArray[j];
+            charArray[j] = temp;
+            string s = new string(charArray);
+            return s;
+        }
+        /// <summary>
+        /// https://leetcode.com/problems/permutations/
+        /// </summary>
+        [TestMethod]
+        public void Permute1Test()
+        {
+
+            var result = Permute1(new int[] { 1, 2, 3 });
         }
         IList<IList<int>> Permutes = new List<IList<int>>();
 
-        public IList<IList<int>> Permute(int[] nums)
+        public IList<IList<int>> Permute1(int[] nums)
         {
             GetPermute(new List<int>(), nums);
 
@@ -194,7 +279,7 @@ namespace DataStructureAlgorithm.ProgrammingQuestions.BinaryTree
                 Permutes.Add(list);
         }
 
-        public IList<IList<int>> Permute1(int[] nums)
+        public IList<IList<int>> Permute2(int[] nums)
         {
             var result = new List<IList<int>>();
             var fact = new[] { 1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800 };
