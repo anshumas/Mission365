@@ -27,7 +27,6 @@
     <Folder Include="ProgrammingQuestions\Heap\Easy\" />
     <Folder Include="ProgrammingQuestions\Heap\Hard\" />
     <Folder Include="ProgrammingQuestions\Heap\Medium\" />
-    <Folder Include="ProgrammingQuestions\LinkedList\Easy\" />
     <Folder Include="ProgrammingQuestions\Math\Easy\" />
     <Folder Include="ProgrammingQuestions\Math\Hard\" />
     <Folder Include="ProgrammingQuestions\Math\Medium\" />
