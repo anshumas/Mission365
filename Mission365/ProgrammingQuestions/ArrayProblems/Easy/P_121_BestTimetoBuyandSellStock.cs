@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataStructureAlgorithm.ProgrammingQuestions.Array.Easy
+namespace DataStructureAlgorithm.ProgrammingQuestions.ArrayProblems.Easy
 {
     /// <summary>
     /// https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
